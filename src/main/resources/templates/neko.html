@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>にゃー</title>
+<meta charset="utf-8" />
+</head>
+<body>
+	<h1>一覧</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>名前</th>
+				<th>年齢</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="neko, status : ${nekoList}" th:object="${neko}"><!-- nekoListの数だけループ -->
+				<td th:text="${status.count}"></td><!-- countは1スタートでカウント可能 -->
+				<td th:text="${neko.name}"></td><!-- オブジェクトの値を参照 -->
+				<td th:text="*{age}"></td><!-- th:objectで指定した場合は*で参照可能 -->
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
