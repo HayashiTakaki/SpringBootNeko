@@ -20,7 +20,6 @@
 *.rar
 
 #
-build
-.gradle
-/.gradle
-/build/
+bin/
+build/
+.gradle/
