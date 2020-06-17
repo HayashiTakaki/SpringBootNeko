@@ -15,9 +15,9 @@ public class NekoController {
 	@Autowired
 	private final NekoService service;
 
-	@GetMapping("neko") // helloWorldへのアクセスを制御する
+	@GetMapping("neko") // nekoへのアクセスを制御する
 	public String hello(Model model) {
-		model.addAttribute("nekoList", service.getNekoList());
-		return "neko"; // hello.htmlをクライアントに返す
+		model.addAttribute("nekoList", service.getNekoList()); // serviceから一覧を取得
+		return "neko"; // neko.htmlをクライアントに返す
 	}
 }

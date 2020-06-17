@@ -4,15 +4,17 @@
 <head>
 <title>にゃー</title>
 <meta charset="utf-8" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
-	<h1>一覧</h1>
-	<table>
+	<h2 th:text=#{title.neko}>Neko CHAN</h2>
+	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>#</th>
-				<th>名前</th>
-				<th>年齢</th>
+				<th th:text=#{label.name}>名前</th>
+				<th th:text=#{label.age}>年齢</th>
 			</tr>
 		</thead>
 		<tbody>
