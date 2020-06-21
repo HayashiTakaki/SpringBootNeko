@@ -27,18 +27,8 @@ public class NekoService {
 	}
 
 	/**
-	 * IDを指定してねこを取得する
-	 * 
-	 * @param id
-	 * @return
-	 */
-	public Neko getNeko(int id) {
-		return mapper.getNeko(id);
-	}
-
-	/**
 	 * ねこを登録する
-	 * 
+	 *
 	 * @param neko
 	 * @return
 	 */

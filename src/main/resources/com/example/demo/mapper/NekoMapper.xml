@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapperのFQCNを指定 -->
 <mapper namespace="com.example.demo.mapper.NekoMapper">
-    <select id="getNeko" resultType="com.example.demo.domain.Neko">
-        SELECT * FROM neko_table WHERE id = #{id}
-    </select>
-    <select id="getNekoList" resultType="com.example.demo.domain.Neko">
+    <!-- select文はselectタグを利用する．idはインターフェースのメソッド名とする．resultTypeで結果を格納するJavaのオブジェクトを指定 -->
+    <select id="getNekoList" resultType="Neko">
         SELECT * FROM neko_table
     </select>
-    <insert id="insertNeko" parameterType="com.example.demo.domain.Neko">
+    <!-- insert文はinsertタグを利用する．idはインターフェースのメソッド名とする．-->
+    <!-- parameterTypeで引数のJavaのオブジェクトを指定．#{name}と指定すると，オブジェクトのgetName()から値を取得する． -->
+    <insert id="insertNeko" parameterType="Neko">
         INSERT INTO neko_table (id, name, age) VALUES (#{id}, #{name}, #{age})
     </insert>
 </mapper>
