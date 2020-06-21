@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class NekoController {
 	@Autowired
-	private final NekoService service;
+	private NekoService service;
 
 	@GetMapping("neko") // nekoへのアクセスを制御する
 	public String hello(Model model) {
