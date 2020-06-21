@@ -32,7 +32,7 @@ public class NekoService {
 	 * @param neko
 	 * @return
 	 */
-	public boolean insertneko(Neko neko) {
+	public boolean insertNeko(Neko neko) {
 		return mapper.insertNeko(neko);
 	}
 }
